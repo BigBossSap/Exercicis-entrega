@@ -23,7 +23,7 @@ namespace Ex05
             {
                 
                 
-                if ()
+                if (edat)
                 
                 
                 
