@@ -11,9 +11,10 @@ namespace Ex05
    (Si dos usuaris tenen la mateixa edat, només en mostra un). */
 
             StreamReader fitxerR = new StreamReader(@"edats.txt");
+            StreamWriter fitxerW = new StreamWriter(@"resultat.txt");
 
-            string nom;
-            int edat, edat2;
+            string nom, nomMajor="";
+            int edat, edat2 = int.MinValue, edatMajor = 0; ;
 
             nom = fitxerR.ReadLine();
             edat = int.Parse(fitxerR.ReadLine());
@@ -23,7 +24,12 @@ namespace Ex05
             {
                 
                 
-                if (edat)
+                if (edat > edat2)
+                {
+                    edatMajor = edat;
+                    edat2 = edat;
+                    nomMajor = nom;
+                }
                 
                 
                 
@@ -32,6 +38,11 @@ namespace Ex05
                 edat = int.Parse(fitxerR.ReadLine());
             }
 
+            fitxerW.WriteLine($"El major es en/la {nomMajor} que te {edatMajor}");
+
+            fitxerR.Close();
+            fitxerW.Close();
+            
         }
     }
 }

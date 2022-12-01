@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Diagnostics.Contracts;
 using System.IO;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Ex06
 {
@@ -16,15 +19,39 @@ namespace Ex06
 
 
             char lletra;
+            int cont=1, contC=0, contV=0;
+            bool parell = true;
 
-            StreamReader fitxerR = new StreamReader(@"secuenices.txt");
-            lletra= Con
+            Console.WriteLine("frase:");
+            lletra = (char)(Console.Read());
 
-            while (lletra!='.')
+            while (!(lletra=='.'))
             {
+                if (lletra == 'a' || lletra == 'e' || lletra == 'i' || lletra == 'o' || lletra == 'u')
+                    
+                {
+                    if (cont % 2 != 0)
+                        parell = false;
+                }
+                    
+
+                else if (!(lletra == 'a' || lletra == 'e' || lletra == 'i' || lletra == 'o' || lletra == 'u') && lletra!=' ')
+                {
+                    if (cont % 2 == 0)
+                        parell = false;
+                }
 
 
+
+                cont++;
+                lletra = (char)(Console.Read());
             }
+
+            if (parell==false)
+                Console.WriteLine("No es correcta");
+            else
+                Console.WriteLine("Es correcta");
+
 
 
         }
