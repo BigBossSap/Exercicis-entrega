@@ -19,11 +19,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex05", "Ex05\Ex05.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex06", "Ex06\Ex06.csproj", "{BC5948EE-C856-4429-84C7-9DE15BD2F654}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex06.b Fitxers", "Ex06.b Fitxers\Ex06.b Fitxers.csproj", "{C987CCAA-D028-49D9-BB8B-5A90828CF11B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex06.b Fitxers", "Ex06.b Fitxers\Ex06.b Fitxers.csproj", "{C987CCAA-D028-49D9-BB8B-5A90828CF11B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex07", "Ex07\Ex07.csproj", "{3C642948-E8E0-436A-BE4A-51EC13A338C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex07", "Ex07\Ex07.csproj", "{3C642948-E8E0-436A-BE4A-51EC13A338C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex09", "Ex09\Ex09.csproj", "{5F54F9CE-615D-4207-8E8E-B9D36BBDA94B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex09", "Ex09\Ex09.csproj", "{5F54F9CE-615D-4207-8E8E-B9D36BBDA94B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex12 (Extra 2)", "Ex12 (Extra 2)\Ex12 (Extra 2).csproj", "{9C7C6CE7-FE0F-4B02-9392-032B264FB58A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{5F54F9CE-615D-4207-8E8E-B9D36BBDA94B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F54F9CE-615D-4207-8E8E-B9D36BBDA94B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F54F9CE-615D-4207-8E8E-B9D36BBDA94B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C7C6CE7-FE0F-4B02-9392-032B264FB58A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C7C6CE7-FE0F-4B02-9392-032B264FB58A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C7C6CE7-FE0F-4B02-9392-032B264FB58A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C7C6CE7-FE0F-4B02-9392-032B264FB58A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
