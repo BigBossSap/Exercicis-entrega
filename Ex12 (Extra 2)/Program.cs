@@ -27,9 +27,11 @@ namespace Ex12__Extra_2_
             
             int valorActual;
             int valorAnterior;
-            int numRepetit;
+            int numRepetit=int.MinValue, numRepetitAnt;
+            int aux = 0;
             int cont = 0, contRepetits = 0;
             string secuencia = "";
+            bool creixent = true;
 
 
             valorAnterior = int.Parse(fitxerR.ReadLine());
@@ -48,16 +50,24 @@ namespace Ex12__Extra_2_
                     cont = 0;
 
 
-                Console.WriteLine(cont);
+               
 
                 if (cont>1)
                 {
+
+
+                    aux = numRepetit;
                     numRepetit = valorActual;
+
+                    if (aux>valorActual)
+                        creixent = false;
+
                     secuencia += valorActual;
                     contRepetits++;
                 }
 
-               
+                
+                
 
 
                 valorAnterior = valorActual;
@@ -67,31 +77,16 @@ namespace Ex12__Extra_2_
                 
                 
             }
-            Console.WriteLine(secuencia);
-            Console.WriteLine(contRepetits);
-
-            long num;
             
-            int i = 0;
-            string secuencia2 = "";
+            if (creixent==false)
+                Console.WriteLine("No es");
 
-            num = long.Parse(secuencia);
+            else if (contRepetits==0)
+                Console.WriteLine("No hi ha secuencia amagada");
+            else 
+                Console.WriteLine("es creixent");
 
-            while (i<contRepetits-1)
-            {
-                if (secuencia[i] == secuencia[i+1])
-                {
-                    secuencia2 -= secuencia[i];
-                }
-
-                else
-                    secuencia2 += secuencia[i];
-
-                i++;
-
-            }
-
-            Console.WriteLine(secuencia2);
+            Console.WriteLine(secuencia);
 
             
            
