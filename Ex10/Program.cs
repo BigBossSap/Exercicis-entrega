@@ -17,17 +17,23 @@ namespace Ex10
 
 
             char lletra;
-            string paraula="";
-            string paraula2="";
-            bool escriu=true;
+            string paraula = "";
+            string paraula2 = "";
+            int cont = 0;
+            bool escriu = true;
             lletra = (char)(Console.Read());
 
 
             while (lletra != '.')
             {
-
-                if (escriu && lletra!=' ')
+                if (lletra== ' ')
+                    escriu = false;
+                if (lletra != ' ')
+                {
                     paraula += lletra;
+                    escriu = true;
+                }
+
 
                 if (lletra == ' ')
                 {
@@ -37,38 +43,40 @@ namespace Ex10
                         Console.WriteLine($"repetida {paraula2}");
                         paraula = "";
                         paraula2 = "";
+                        cont++;                    }
+
+                    while (lletra == ' ' && lletra != '.')
+                    {
+                        paraula2 += lletra;
+                        lletra = (char)(Console.Read());
+
                     }
                     if (paraula != paraula2 && lletra == ' ')
                     {
                         paraula = "";
 
                     }
-                    escriu = false;
-                    lletra = (char)(Console.Read());
                     
-                    while (lletra != ' ' && lletra !='.' && lletra !='\r')
-                    {
-                        paraula2 += lletra;
-                        lletra = (char)(Console.Read());
-                                      
-                    }
-
+                    lletra = (char)(Console.Read());
 
                    
 
-                    escriu = true;
+
+
+
+                   
                 }
-                //paraula2 += lletra;
+                
 
 
-                
-               
-                
+
+
+
                 lletra = (char)(Console.Read());
 
             }
 
-            
+
         }
     }
 }

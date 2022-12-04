@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Xml;
 
 namespace Ex12__Extra_2_
 {
@@ -23,25 +24,77 @@ namespace Ex12__Extra_2_
 
             StreamReader fitxerR = new StreamReader("amagada.txt");
 
-            string serie = "";
-            char valorActual;
-            char valorAnterior ;
-            int cont = 0;
+            
+            int valorActual;
+            int valorAnterior;
+            int numRepetit;
+            int cont = 0, contRepetits = 0;
+            string secuencia = "";
 
 
-            valorAnterior = fitxerR.Read();
-            valorActual = fitxerR.Read();
+            valorAnterior = int.Parse(fitxerR.ReadLine());
+            valorActual = int.Parse(fitxerR.ReadLine());
             
 
             while(valorActual != -1 && !fitxerR.EndOfStream)
             {
                 if (valorActual == valorAnterior)
+                {
                     cont++;
+                    
+                }
+
+                if (valorAnterior != valorActual)
+                    cont = 0;
 
 
-                Console.WriteLine(valorActual);
-                Console.WriteLine(valorAnterior);
+                Console.WriteLine(cont);
+
+                if (cont>1)
+                {
+                    numRepetit = valorActual;
+                    secuencia += valorActual;
+                    contRepetits++;
+                }
+
+               
+
+
+                valorAnterior = valorActual;
+                valorActual = int.Parse(fitxerR.ReadLine());
+
+
+                
+                
             }
+            Console.WriteLine(secuencia);
+            Console.WriteLine(contRepetits);
+
+            long num;
+            
+            int i = 0;
+            string secuencia2 = "";
+
+            num = long.Parse(secuencia);
+
+            while (i<contRepetits-1)
+            {
+                if (secuencia[i] == secuencia[i+1])
+                {
+                    secuencia2 -= secuencia[i];
+                }
+
+                else
+                    secuencia2 += secuencia[i];
+
+                i++;
+
+            }
+
+            Console.WriteLine(secuencia2);
+
+            
+           
 
 
 
