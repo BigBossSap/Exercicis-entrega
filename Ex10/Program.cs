@@ -16,69 +16,72 @@ namespace Ex10
     paraula massa posició 5*/
 
 
-            int  contParaules = 1, contRep = 0;
+            int  contParaules = 0, contRep = 0;
             string paraulaAnterior = "", paraulaActual = "";
             char lletraA, lletraS;
             bool escriure = true;
 
             lletraA = (char)Console.Read();
             lletraS = (char)Console.Read();
+            paraulaActual += lletraA;
 
-            while (lletraS != '\r')
+            do
             {
 
 
                 if (lletraS != ' ')
                 {
                     paraulaActual += lletraS;
-                    contParaules++;
+
                 }
 
 
-                    if ((lletraA >= 'a' && lletraA <= 'z') && (lletraS < 'a' || lletraS > 'z') || (lletraS == '\r'))
+                if ((lletraA >= 'a' && lletraS <= 'z') && (lletraS < 'a' || lletraS > 'z') ||(paraulaAnterior == paraulaActual))
                 {
 
                     contParaules++;
-                    
+
                     if (paraulaAnterior == paraulaActual)
                     {
-                       contRep++;
+                        contRep++;
+                        Console.WriteLine($"{paraulaActual} en posicio {contParaules}");
 
                     }
-                        
+
                     paraulaAnterior = paraulaActual;
                     paraulaActual = "";
                 }
 
-                
 
-                
 
-                
+
+
+
                 lletraA = lletraS;
                 lletraS = (char)Console.Read();
 
-            }
-
-            Console.WriteLine($"Paraules repetides {contRep}");
-            
+            } while (lletraS != '.');
 
 
+            Console.WriteLine($"paraules repetides en total {contRep}");
 
 
 
 
 
-        
-                
 
 
 
 
 
-               
 
-            
+
+
+
+
+
+
+
 
 
         }

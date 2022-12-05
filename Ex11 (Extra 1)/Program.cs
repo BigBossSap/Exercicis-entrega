@@ -26,21 +26,32 @@ namespace Ex11__Extra_1_
 
 
 
-            int contTotal = 0, contParaules = 1, contLong = 0, comparador = 0;
+            int contTotal = 0, contParaules = 0, contLong = 0, comparador = 0;
             string paraulaM = "", paraulaActual="";
             char lletraA, lletraS;
 
             lletraA = (char)Console.Read();
+
+            do
+            {
+                lletraA = (char)Console.Read();
+
+            } while (lletraA < 'a' || lletraA > 'z');
+
             lletraS = (char)Console.Read();
 
             while (lletraS!='\r')
             {
 
-                contLong++;
-                paraulaActual += lletraS;
-               
 
-                if((lletraA>='a'&&lletraA<='z')&&(lletraS<'a'||lletraS>'z')||(lletraS=='\r'))
+
+                if (lletraS >= 'a' && lletraS <= 'z')
+                {
+                    paraulaActual += lletraS;
+                    contLong++;
+                }
+
+                    if ((lletraA>='a'&&lletraA<='z')&&(lletraS<'a'||lletraS>'z'))
                 {
 
                     contParaules++;
@@ -65,7 +76,7 @@ namespace Ex11__Extra_1_
                 
             }
             int mitjana;
-            mitjana = contTotal / contParaules;
+            mitjana = contTotal/contParaules;
             Console.WriteLine($"La mitjana de paraula es {mitjana}, la longitud maxima es {comparador} que correspon a {paraulaM}");
             
             //No esta be, falla si fas espais o caracters diferents a lletra. I tambe si començes amb algun caracter que no sigui lletra.
