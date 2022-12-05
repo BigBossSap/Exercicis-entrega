@@ -26,7 +26,7 @@ namespace Ex11__Extra_1_
 
 
 
-            int contTotal = 0, contParaules = 0, contLong = 0, comparador = 0;
+            int contTotal = 0, contParaules =0, contLong = 0, comparador = 0;
             string paraulaM = "", paraulaActual="";
             char lletraA, lletraS;
 
@@ -40,10 +40,8 @@ namespace Ex11__Extra_1_
 
             lletraS = (char)Console.Read();
 
-            while (lletraS!='\r')
+            do
             {
-
-
 
                 if (lletraS >= 'a' && lletraS <= 'z')
                 {
@@ -51,7 +49,7 @@ namespace Ex11__Extra_1_
                     contLong++;
                 }
 
-                    if ((lletraA>='a'&&lletraA<='z')&&(lletraS<'a'||lletraS>'z'))
+                    if ((lletraA>='a'&&lletraA<='z')&&(lletraS<'a'||lletraS>'z')|| (lletraA < 'a' && lletraA > 'z') && (lletraS >= 'a' || lletraS <= 'z'))
                 {
 
                     contParaules++;
@@ -74,12 +72,21 @@ namespace Ex11__Extra_1_
                 lletraA = lletraS;
                 lletraS = (char)Console.Read();
                 
+            } while (lletraS != '\r');
+                int mitjana;
+
+            if (contParaules == 0)
+                Console.WriteLine("No hi ha paraules!");
+            else
+            {
+                mitjana = contTotal / contParaules;
+                Console.WriteLine(contTotal);
+                Console.WriteLine(contParaules);
+                Console.WriteLine($"La mitjana de paraula es {mitjana}, la longitud maxima es {comparador} que correspon a {paraulaM}");
             }
-            int mitjana;
-            mitjana = contTotal/contParaules;
-            Console.WriteLine($"La mitjana de paraula es {mitjana}, la longitud maxima es {comparador} que correspon a {paraulaM}");
+
             
-            //No esta be, falla si fas espais o caracters diferents a lletra. I tambe si començes amb algun caracter que no sigui lletra.
+            
 
 
 
