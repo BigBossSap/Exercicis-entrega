@@ -16,65 +16,69 @@ namespace Ex10
     paraula massa posició 5*/
 
 
-            char lletra;
-            string paraula = "";
-            string paraula2 = "";
-            int cont = 0;
-            bool escriu = true;
-            lletra = (char)(Console.Read());
+            int  contParaules = 1, contRep = 0;
+            string paraulaAnterior = "", paraulaActual = "";
+            char lletraA, lletraS;
+            bool escriure = true;
 
+            lletraA = (char)Console.Read();
+            lletraS = (char)Console.Read();
 
-            while (lletra != '.')
+            while (lletraS != '\r')
             {
-                if (lletra== ' ')
-                    escriu = false;
-                if (lletra != ' ')
+
+
+                if (lletraS != ' ')
                 {
-                    paraula += lletra;
-                    escriu = true;
+                    paraulaActual += lletraS;
+                    contParaules++;
                 }
 
 
-                if (lletra == ' ')
+                    if ((lletraA >= 'a' && lletraA <= 'z') && (lletraS < 'a' || lletraS > 'z') || (lletraS == '\r'))
                 {
 
-                    if (paraula == paraula2)
-                    {
-                        Console.WriteLine($"repetida {paraula2}");
-                        paraula = "";
-                        paraula2 = "";
-                        cont++;                    }
-
-                    while (lletra == ' ' && lletra != '.')
-                    {
-                        paraula2 += lletra;
-                        lletra = (char)(Console.Read());
-
-                    }
-                    if (paraula != paraula2 && lletra == ' ')
-                    {
-                        paraula = "";
-
-                    }
+                    contParaules++;
                     
-                    lletra = (char)(Console.Read());
+                    if (paraulaAnterior == paraulaActual)
+                    {
+                       contRep++;
 
-                   
-
-
-
-
-                   
+                    }
+                        
+                    paraulaAnterior = paraulaActual;
+                    paraulaActual = "";
                 }
+
+                
+
+                
+
+                
+                lletraA = lletraS;
+                lletraS = (char)Console.Read();
+
+            }
+
+            Console.WriteLine($"Paraules repetides {contRep}");
+            
+
+
+
+
+
+
+
+        
                 
 
 
 
 
 
-                lletra = (char)(Console.Read());
+               
 
-            }
+            
 
 
         }
