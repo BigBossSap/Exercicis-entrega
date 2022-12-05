@@ -26,7 +26,7 @@ namespace Ex11__Extra_1_
 
 
 
-            int contTotal = 0, contParaules =0, contLong = 0, comparador = 0;
+            int contTotal = 2, contParaules =1, contLong = 0, comparador = 0;
             string paraulaM = "", paraulaActual="";
             char lletraA, lletraS;
 
@@ -49,7 +49,7 @@ namespace Ex11__Extra_1_
                     contLong++;
                 }
 
-                    if ((lletraA>='a'&&lletraA<='z')&&(lletraS<'a'||lletraS>'z')|| (lletraA < 'a' && lletraA > 'z') && (lletraS >= 'a' || lletraS <= 'z'))
+                    if ((lletraA>='a'&&lletraA<='z')&&(lletraS<'a'||lletraS>'z')|| ((lletraA < 'a' && lletraA > 'z') && (lletraS >= 'a' || lletraS <= 'z')))
                 {
 
                     contParaules++;
@@ -67,6 +67,7 @@ namespace Ex11__Extra_1_
                 
                 if(lletraA<'a' || lletraA>'z')
                     contTotal--;
+                
 
                 contTotal++;
                 lletraA = lletraS;
@@ -74,6 +75,12 @@ namespace Ex11__Extra_1_
                 
             } while (lletraS != '\r');
                 int mitjana;
+
+            if (lletraS < 'a' || lletraS > 'z')
+            
+                contParaules--;
+                
+            
 
             if (contParaules == 0)
                 Console.WriteLine("No hi ha paraules!");
