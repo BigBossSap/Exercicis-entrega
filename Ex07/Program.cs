@@ -9,38 +9,36 @@ namespace Ex07
             /*7.- Donada una seqüència de números acabada en -1, indicar en quants números tenen el 25 entre les
    seues xifres... per exemple el 14254 té aquesta condició i dir quins números són (podeu concatenar un
    string)*/
-            int ant, act, act2, cont = 0;
-            string numeros = "";
-            ant = int.Parse(Console.ReadLine());
-            act = int.Parse(Console.ReadLine());
+            int ant, ant1 = 0, ant2 = 0, i = 0, num, posterior;
+            bool semafor = false;
 
+            Console.WriteLine("Escriu un num");
+            num = Convert.ToInt32(Console.ReadLine());
 
-            while (act != -1)
+            ant = 0;
+            posterior = 0;
+
+            while (num != -1)
             {
-                if (act==2)
+                if (semafor == true && i == 0)
                 {
-                       numeros += ant;
-                                    
-               }
-                ant = act;
-                act = int.Parse(Console.ReadLine());
-
-                if (act==5)
-                {
-                    cont++;
+                    posterior = num;
+                    i++;
                 }
-                else if (act != 5)
-                    numeros += "\b";
 
-                ant = act;
-                act = int.Parse(Console.ReadLine());
-                act2 = act;
-                
 
+                if (num == 5 && ant == 2)
+                {
+                    semafor = true;
+                    ant2 = ant1;
+                }
+
+                ant1 = ant;
+                ant = num;
+                num = Convert.ToInt32(Console.ReadLine());
 
             }
-
-            Console.WriteLine(numeros);
+            Console.WriteLine($"L'anterior de 25 es {ant2} i el posterior {posterior}");
         }
     }
 }

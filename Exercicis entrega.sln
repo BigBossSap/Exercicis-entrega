@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.3.32922.545
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32929.386
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex01", "Ex01\Ex01.csproj", "{BD736F02-615A-42C3-8043-608E9C46451E}"
 EndProject
@@ -29,7 +29,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex12 (Extra 2)", "Ex12 (Ext
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Proves", "Proves\Proves.csproj", "{E5117C1E-898E-4B02-8B53-43863EE18F9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex11 (Extra 1)", "Ex11 (Extra 1)\Ex11 (Extra 1).csproj", "{67F05F3D-950B-4C80-B187-2A35F0C52091}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex11 (Extra 1)", "Ex11 (Extra 1)\Ex11 (Extra 1).csproj", "{67F05F3D-950B-4C80-B187-2A35F0C52091}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex13 (Extra 3)", "Ex13 (Extra 3)\Ex13 (Extra 3).csproj", "{6E6F4C82-6124-4234-8285-6EE34C87964F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercici extra ordenar", "Exercici extra ordenar\Exercici extra ordenar.csproj", "{058EAA30-035D-49F2-A93D-7E5DF53D0EBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex14 (Ex01 llista extra)", "Ex14 (Ex01 llista extra)\Ex14 (Ex01 llista extra).csproj", "{6F3D6D94-6449-4B41-83DC-C07C301B1F7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex15 (exercici 2 llista extra)", "Ex15 (exercici 2 llista extra)\Ex15 (exercici 2 llista extra).csproj", "{CA6191E1-496E-4B7F-B6BC-4F60CD48DFFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex16 (Exercici 3 llista extra)", "Ex16 (Exercici 3 llista extra)\Ex16 (Exercici 3 llista extra).csproj", "{B8FFB967-8143-47FB-928F-F9E8CA850410}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +103,26 @@ Global
 		{67F05F3D-950B-4C80-B187-2A35F0C52091}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67F05F3D-950B-4C80-B187-2A35F0C52091}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67F05F3D-950B-4C80-B187-2A35F0C52091}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E6F4C82-6124-4234-8285-6EE34C87964F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E6F4C82-6124-4234-8285-6EE34C87964F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E6F4C82-6124-4234-8285-6EE34C87964F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E6F4C82-6124-4234-8285-6EE34C87964F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{058EAA30-035D-49F2-A93D-7E5DF53D0EBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{058EAA30-035D-49F2-A93D-7E5DF53D0EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{058EAA30-035D-49F2-A93D-7E5DF53D0EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{058EAA30-035D-49F2-A93D-7E5DF53D0EBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F3D6D94-6449-4B41-83DC-C07C301B1F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F3D6D94-6449-4B41-83DC-C07C301B1F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F3D6D94-6449-4B41-83DC-C07C301B1F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F3D6D94-6449-4B41-83DC-C07C301B1F7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA6191E1-496E-4B7F-B6BC-4F60CD48DFFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA6191E1-496E-4B7F-B6BC-4F60CD48DFFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA6191E1-496E-4B7F-B6BC-4F60CD48DFFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA6191E1-496E-4B7F-B6BC-4F60CD48DFFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8FFB967-8143-47FB-928F-F9E8CA850410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8FFB967-8143-47FB-928F-F9E8CA850410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8FFB967-8143-47FB-928F-F9E8CA850410}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8FFB967-8143-47FB-928F-F9E8CA850410}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

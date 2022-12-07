@@ -27,7 +27,7 @@ namespace Ex12__Extra_2_
             
             int valorActual;
             int valorAnterior;
-            int numRepetit=int.MinValue, numRepetitAnt;
+            int numRepetit=int.MinValue;
             int aux = 0;
             int cont = 0, contRepetits = 0;
             string secuencia = "";
@@ -79,12 +79,12 @@ namespace Ex12__Extra_2_
             }
             
             if (creixent==false)
-                Console.WriteLine("No es");
+                Console.WriteLine("No es creixent");
 
             else if (contRepetits==0)
                 Console.WriteLine("No hi ha secuencia amagada");
             else 
-                Console.WriteLine("es creixent");
+                Console.WriteLine("Es creixent");
 
             Console.WriteLine(secuencia);
 

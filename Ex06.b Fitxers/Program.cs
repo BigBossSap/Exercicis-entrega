@@ -17,7 +17,7 @@ namespace Ex06.b_Fitxers
             
             lletra = (char)(fitxerR.Read());
 
-            while (!(lletra == '.'))
+            while (!(lletra == '.') && parell == true)
             {
                 if (lletra == 'a' || lletra == 'e' || lletra == 'i' || lletra == 'o' || lletra == 'u')
 
@@ -27,11 +27,15 @@ namespace Ex06.b_Fitxers
                 }
 
 
-                else if (!(lletra == 'a' || lletra == 'e' || lletra == 'i' || lletra == 'o' || lletra == 'u') && lletra != ' ')
+                else if (!(lletra == 'a' && lletra == 'e' && lletra == 'i' && lletra == 'o' && lletra == 'u') && lletra != ' ')
                 {
                     if (cont % 2 == 0)
                         parell = false;
                 }
+
+
+
+                
 
 
 

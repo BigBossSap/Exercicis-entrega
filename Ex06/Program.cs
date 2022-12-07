@@ -19,13 +19,13 @@ namespace Ex06
 
 
             char lletra;
-            int cont=1, contC=0, contV=0;
+            int cont = 1;
             bool parell = true;
 
             Console.WriteLine("frase:");
             lletra = (char)(Console.Read());
 
-            while (!(lletra=='.'))
+            while (!(lletra=='.')&&parell==true)
             {
                 if (lletra == 'a' || lletra == 'e' || lletra == 'i' || lletra == 'o' || lletra == 'u')
                     
@@ -35,7 +35,7 @@ namespace Ex06
                 }
                     
 
-                else if (!(lletra == 'a' || lletra == 'e' || lletra == 'i' || lletra == 'o' || lletra == 'u') && lletra!=' ')
+                else if (!(lletra == 'a' && lletra == 'e' && lletra == 'i' && lletra == 'o' && lletra == 'u') && lletra!=' ')
                 {
                     if (cont % 2 == 0)
                         parell = false;

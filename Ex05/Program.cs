@@ -14,7 +14,7 @@ namespace Ex05
             StreamWriter fitxerW = new StreamWriter(@"resultat.txt");
 
             string nom, nomMajor="";
-            int edat, edat2 = int.MinValue, edatMajor = 0; ;
+            int edat, edat2 = int.MinValue, edatMajor = 0; 
 
             nom = fitxerR.ReadLine();
             edat = int.Parse(fitxerR.ReadLine());
