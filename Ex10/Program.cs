@@ -19,7 +19,7 @@ namespace Ex10
             int  contParaules = 0, contRep = 0;
             string paraulaAnterior = "", paraulaActual = "";
             char lletraA, lletraS;
-            bool escriure = true;
+            
 
             lletraA = (char)Console.Read();
             lletraS = (char)Console.Read();
@@ -27,15 +27,11 @@ namespace Ex10
 
             do
             {
-
-
                 if (lletraS != ' ')
                 {
                     paraulaActual += lletraS;
 
                 }
-
-
                 if ((lletraA >= 'a' && lletraS <= 'z') && (lletraS < 'a' || lletraS > 'z') ||(paraulaAnterior == paraulaActual))
                 {
 
@@ -51,12 +47,6 @@ namespace Ex10
                     paraulaAnterior = paraulaActual;
                     paraulaActual = "";
                 }
-
-
-
-
-
-
                 lletraA = lletraS;
                 lletraS = (char)Console.Read();
 
