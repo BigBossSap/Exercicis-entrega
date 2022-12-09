@@ -67,6 +67,7 @@ namespace Ex08
                 suma -= notaMax;
                 mediana = suma / cuantos;
                 Console.WriteLine($"La nota mitjana es {Math.Round(mediana, 1)}");
+                Console.WriteLine(notaMax);
             }
         }
     }

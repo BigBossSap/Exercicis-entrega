@@ -16,7 +16,7 @@ namespace Ex10
     paraula massa posició 5*/
 
 
-            int  contParaules = 0, contRep = 0;
+            int  contParaules = 1, contRep = 0;
             string paraulaAnterior = "", paraulaActual = "";
             char lletraA, lletraS;
             
@@ -32,13 +32,14 @@ namespace Ex10
                     paraulaActual += lletraS;
 
                 }
-                if ((lletraA >= 'a' && lletraS <= 'z') && (lletraS < 'a' || lletraS > 'z') ||(paraulaAnterior == paraulaActual))
+                if ((lletraA >= 'a' && lletraS <= 'z') && (lletraS < 'a' || lletraS > 'z') || (paraulaAnterior == paraulaActual))
                 {
 
                     contParaules++;
 
                     if (paraulaAnterior == paraulaActual)
                     {
+                        contParaules--;
                         contRep++;
                         Console.WriteLine($"{paraulaActual} en posicio {contParaules}");
 
