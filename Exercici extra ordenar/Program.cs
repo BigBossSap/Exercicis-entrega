@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.IO;
 
 namespace Exercici_extra_ordenar
@@ -21,47 +22,43 @@ namespace Exercici_extra_ordenar
 
             fitxerW.Close();
 
-            int valor=int.MinValue;
 
-            int j = 0;
-            int menor= int.MinValue;
+
+            int valor;
+            int menor= int.MinValue; 
             int menorAnt=int.MaxValue;
             
             StreamReader fitxer;
 
-           
-
-            while (j<=num)
+            
+            while (menor!=int.MaxValue)
             {
-                menorAnt = menor;
-                menor = int.MaxValue;
                 fitxer = new StreamReader("numeros.txt");
                 valor = int.Parse(fitxer.ReadLine());
+                menorAnt = menor;
+                menor = int.MaxValue;
+                
                 
 
                 while (!fitxer.EndOfStream)
                 {
 
                     
-                        if (valor < menorAnt && valor<menor)
-                        {
+
+                    if (valor > menorAnt && valor<menor)
+                        
                             menor = valor;
-                            
-
-                        }
-
-
-
-                    
+                                         
+                 
                     valor = int.Parse(fitxer.ReadLine());
-                   
                 }
 
+                if (menor == int.MaxValue)
+                    break;
 
 
+                Console.WriteLine(menor);
 
-                j++;
-                Console.WriteLine(menorAnt);
 
                 fitxer.Close();
             }
